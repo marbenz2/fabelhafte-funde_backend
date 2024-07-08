@@ -14,7 +14,7 @@ type Args = {
   }
 }
 
-export const maxDuration = 60
+export const maxDuration = 30
 
 export const generateMetadata = ({ params, searchParams }: Args): Promise<Metadata> =>
   generatePageMetadata({ config, params, searchParams })

@@ -7,8 +7,26 @@ export const Posts: CollectionConfig = {
   },
   fields: [
     {
-      name: 'test',
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      required: false,
+    },
+    {
+      name: 'itemName',
       type: 'text',
+      maxLength: 25,
+      required: true,
+    },
+    {
+      name: 'description',
+      type: 'textarea',
+      maxLength: 100,
+      required: true,
+    },
+    {
+      name: 'price',
+      type: 'number',
       required: true,
     },
   ],
