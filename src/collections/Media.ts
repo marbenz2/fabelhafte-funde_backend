@@ -15,8 +15,14 @@ export const Media: CollectionConfig = {
       },
       {
         name: 'card',
-        width: 768,
-        height: 1024,
+        width: 250,
+        height: undefined,
+        position: 'centre',
+      },
+      {
+        name: 'inspector',
+        width: 800,
+        height: undefined,
         position: 'centre',
       },
     ],
