@@ -15,13 +15,13 @@ export const Posts: CollectionConfig = {
     {
       name: 'itemName',
       type: 'text',
-      maxLength: 25,
+      maxLength: 50,
       required: true,
     },
     {
       name: 'description',
       type: 'textarea',
-      maxLength: 100,
+      maxLength: 300,
       required: true,
     },
     {
