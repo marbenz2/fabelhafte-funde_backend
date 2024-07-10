@@ -6,24 +6,43 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
+    formatOptions: {
+      format: 'webp',
+    },
+    resizeOptions: {
+      position: 'centre',
+      fit: 'cover',
+    },
     imageSizes: [
       {
         name: 'thumbnail',
         width: 400,
         height: 300,
         position: 'centre',
+        fit: 'cover',
+        formatOptions: {
+          format: 'webp',
+        },
       },
       {
         name: 'card',
-        width: 400,
-        height: undefined,
+        width: 600,
+        height: 800,
         position: 'centre',
+        fit: 'outside',
+        formatOptions: {
+          format: 'webp',
+        },
       },
       {
         name: 'inspector',
-        width: 800,
+        width: 1280,
         height: undefined,
         position: 'centre',
+        fit: 'cover',
+        formatOptions: {
+          format: 'webp',
+        },
       },
     ],
     adminThumbnail: 'thumbnail',
