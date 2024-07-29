@@ -19,7 +19,7 @@ export const Posts: CollectionConfig = {
       required: true,
     },
     {
-      name: 'description',
+      name: 'shortDescription',
       type: 'text',
       maxLength: 75,
       required: true,
@@ -27,19 +27,34 @@ export const Posts: CollectionConfig = {
     {
       name: 'price',
       type: 'number',
-      required: true,
     },
     {
       name: 'condition',
-      type: 'text',
-      maxLength: 50,
+      type: 'select',
+      hasMany: false,
+      admin: {
+        isClearable: true,
+        isSortable: true,
+      },
+      options: [
+        {
+          label: 'Neuwertig',
+          value: 'Neuwertig',
+        },
+        {
+          label: 'Sehr gut',
+          value: 'Sehr gut',
+        },
+        { label: 'Gut', value: 'Gut' },
+        { label: 'Akzeptabel', value: 'Akzeptabel' },
+        { label: 'Beschädigt', value: 'Beschädigt' },
+      ],
       required: true,
     },
     {
       name: 'size',
       type: 'text',
       maxLength: 25,
-      required: true,
     },
     {
       name: 'detailedDescription',
