@@ -20,13 +20,31 @@ export const Posts: CollectionConfig = {
     },
     {
       name: 'description',
-      type: 'textarea',
-      maxLength: 300,
+      type: 'text',
+      maxLength: 75,
       required: true,
     },
     {
       name: 'price',
       type: 'number',
+      required: true,
+    },
+    {
+      name: 'condition',
+      type: 'text',
+      maxLength: 50,
+      required: true,
+    },
+    {
+      name: 'size',
+      type: 'text',
+      maxLength: 25,
+      required: true,
+    },
+    {
+      name: 'detailedDescription',
+      type: 'textarea',
+      maxLength: 500,
       required: true,
     },
   ],
