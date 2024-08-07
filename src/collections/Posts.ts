@@ -60,7 +60,6 @@ export const Posts: CollectionConfig = {
       name: 'detailedDescription',
       type: 'textarea',
       maxLength: 500,
-      required: true,
     },
   ],
 }
