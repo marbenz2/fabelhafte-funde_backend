@@ -89,6 +89,14 @@ export interface Media {
       filesize?: number | null;
       filename?: string | null;
     };
+    inspector?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
   };
 }
 /**
@@ -97,10 +105,13 @@ export interface Media {
  */
 export interface Post {
   id: string;
-  image?: string | Media | null;
+  image: string | Media;
   itemName: string;
-  description: string;
-  price: number;
+  shortDescription: string;
+  price?: number | null;
+  condition: 'Neuwertig' | 'Sehr gut' | 'Gut' | 'Akzeptabel' | 'Beschädigt';
+  size?: string | null;
+  detailedDescription: string;
   updatedAt: string;
   createdAt: string;
 }
